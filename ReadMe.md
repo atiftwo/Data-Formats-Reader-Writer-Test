@@ -1,2 +1,2 @@
-## A test project for various writing and reading formats of data
-It's mainly just for testing purposes, nothing else.
+## A pratice/test project for writing and reading various formats of data
+It's mainly just for practising/testing purposes, nothing else.
