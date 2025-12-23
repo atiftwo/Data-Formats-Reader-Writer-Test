@@ -13,4 +13,5 @@ include_directories(Application PUBLIC "${FMT_IncludeDir}")
 set(FMT_LibraryPath "" CACHE STRING "Path to a FMT static library (either for shared or static)")
 link_libraries("${FMT_LibraryPath}")
 
-add_subdirectory("Source")
+add_subdirectory("Source/SimpleViewer")
+add_subdirectory("Source/DataFormats")

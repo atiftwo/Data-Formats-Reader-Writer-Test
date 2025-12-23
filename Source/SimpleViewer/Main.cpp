@@ -8,13 +8,14 @@
 SDL_Window* window;
 SDL_Surface* windowSurface;
 
-const struct {int w, h;} windowSize{.w = 640, .h = 480};
+const struct {int w, h;} windowSize{.w = 1195, .h = 674};
 
 int main() {
-	const SDL_DisplayMode* displayMode = SDL_GetCurrentDisplayMode(0);
-	window = SDL_CreateWindow("Image viewer", 640, 480, SDL_WINDOW_OPENGL);
+	window = SDL_CreateWindow("Image viewer", windowSize.w, windowSize.h, SDL_WINDOW_OPENGL);
 	windowSurface = SDL_GetWindowSurface(window);
 
+	// TO DO: Create a texture and load a texture into it.
+	// TO DO: Make a control system with ImGui that: allows a filename to be specified, selecting codec, loading a file, performing random function operations
 	SDL_Event currentEvent;
 	while (true) {
 		SDL_PollEvent(&currentEvent);
@@ -24,11 +25,7 @@ int main() {
 			default:
 			break;
 		}
-
-		SDL_LockSurface(windowSurface);
-		SDL_memset(windowSurface->pixels, 128, windowSurface->h*windowSurface->pitch);
-		SDL_UnlockSurface(windowSurface);
-		SDL_UpdateWindowSurface(window);
+		// Load image into texture
 	}
 	breakLoop:
 
